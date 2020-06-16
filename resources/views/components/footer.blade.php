@@ -1,3 +1,3 @@
-<header>
+<footer>
   Ciao, sono il footer
-</header>
+</footer>
