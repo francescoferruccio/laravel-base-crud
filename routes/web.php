@@ -11,4 +11,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'CagnoliniController@index');
+Route::get('/', 'CagnoliniController@index')->name('home');
+
+Route::get('/show/{id}', 'CagnoliniController@show')->name('show');
