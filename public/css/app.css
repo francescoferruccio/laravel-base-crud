@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 80px;
+  background-color: red;
+}
+
+main {
+  height: 80vh;
+}
+
+main li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+footer {
+  height: 80px;
+  background-color: blue;
+}
+
