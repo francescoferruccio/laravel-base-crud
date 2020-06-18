@@ -2,6 +2,7 @@
 
 @section('content')
   <h1>Lista omini</h1>
+  <h3><a href="{{ route('create') }}">CREA NUOVO OMINO</a></h3>
     @foreach ($omini as $omino)
       <div>
         <a href="{{ route('show', $omino['id']) }}">
