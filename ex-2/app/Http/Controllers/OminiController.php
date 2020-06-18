@@ -48,4 +48,27 @@ class OminiController extends Controller
 
     return redirect() -> route('home');
   }
+
+  public function edit($id) {
+    $omino = Omino::findOrFail($id);
+
+    return view('edit', compact('omino'));
+  }
+
+  public function update(Request $request, $id) {
+    $data = $request -> all();
+    $omino = Omino::findOrFail($id);
+
+    $omino -> first_name = $data['first_name'];
+    $omino -> last_name = $data['last_name'];
+    $omino -> address = $data['address'];
+    $omino -> code = $data['code'];
+    $omino -> state = $data['state'];
+    $omino -> phone_number = $data['phone_number'];
+    $omino -> role = $data['role'];
+
+    $omino -> save();
+
+    return redirect() -> route('show', $omino['id']);
+  }
 }
