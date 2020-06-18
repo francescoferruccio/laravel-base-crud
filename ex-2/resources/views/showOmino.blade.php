@@ -28,7 +28,7 @@
         <h4>MODIFICA OMINO</h4>
       </a>
       <a href="{{ route('delete', $omino['id']) }}">
-        <h4>CANCELLA OMINO</h4>
+        <h4 id='delete'>CANCELLA OMINO</h4>
       </a>
     </div>
   </div>
