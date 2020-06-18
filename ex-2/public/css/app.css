@@ -3,16 +3,18 @@ footer {
   height: 80px;
   background-color: grey;
   display: flex;
+}
 
-  & > * {
-    margin: auto;
-  }
+header > *,
+footer > * {
+  margin: auto;
 }
 
 main {
   min-height: 50vh;
-
-  div {
-    height: 1.5rem;
-  }
 }
+
+main div {
+  height: 1.5rem;
+}
+

@@ -1,18 +1,18 @@
 <?php
+// GOAL: generare tutti i file necessari per eseguire una CRUD completa (lettura,
+// scrittura, creazione, eliminazione) di elementi dalla tabella Omini cosi' definita:
+// - id
+// - first name
+// - last name
+// - address
+// - code
+// - state
+// - phone number
+// - role
+// L'home page dara' la possibilita' di vedere tutti i nomi e cognomi e di creare
+// un nuovo omino; sara' possibile attraverso un link entrare nell'entita' e
+// vederne tutti i dettagli ed eseguire le operazioni di modifica (edit + delete);
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'OminiController@index');

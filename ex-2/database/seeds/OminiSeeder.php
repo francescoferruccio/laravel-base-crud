@@ -1,16 +1,17 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Omino;
 
-class DatabaseSeeder extends Seeder
+class OminiSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call(OminiSeeder::class);
+      factory(Omino::class, 30) -> create();
     }
 }
