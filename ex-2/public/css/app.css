@@ -1,20 +1,122 @@
-header,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  background-color: grey;
+}
+
 footer {
   height: 80px;
   background-color: grey;
   display: flex;
 }
 
-header > *,
 footer > * {
   margin: auto;
 }
 
 main {
-  min-height: 50vh;
+  width: 100vw;
+  min-height: calc(100vh - 160px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-main div {
+main .index {
+  height: 100%;
+}
+
+main .index h1 {
+  margin-bottom: 20px;
+}
+
+main .index .omino {
   height: 1.5rem;
+}
+
+main .index .new-omino {
+  display: flex;
+  justify-content: center;
+}
+
+main .index .new-omino a {
+  color: blue;
+}
+
+main .show-omino {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .show-omino .details {
+  display: flex;
+  margin: 20px 0;
+}
+
+main .show-omino .details .labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+main .show-omino .details .values {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+main .show-omino .options {
+  text-align: center;
+}
+
+main .show-omino .options h4 {
+  margin: 10px;
+}
+
+main form .form {
+  display: flex;
+  justify-content: center;
+}
+
+main form .form .labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+main form .button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
