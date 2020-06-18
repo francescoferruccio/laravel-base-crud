@@ -12,4 +12,10 @@ class OminiController extends Controller
 
     return view('home', compact('omini'));
   }
+
+  public function show($id) {
+    $omino = Omino::findOrFail($id);
+
+    return view('showOmino', compact('omino'));
+  }
 }
