@@ -40,4 +40,12 @@ class OminiController extends Controller
 
     return redirect() -> route('home');
   }
+
+  public function delete($id) {
+    $omino = Omino::findOrFail($id);
+
+    $omino -> delete();
+
+    return redirect() -> route('home');
+  }
 }

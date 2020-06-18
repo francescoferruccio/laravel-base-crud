@@ -12,5 +12,8 @@
       <li>Telefono: {{ $omino['phone_number'] }}</li>
       <li>Lavoro: {{ $omino['role'] }}</li>
     </ul>
+    <a href="{{ route('delete', $omino['id']) }}">
+      <h4>CANCELLA OMINO</h4>
+    </a>
   </div>
 @endsection
