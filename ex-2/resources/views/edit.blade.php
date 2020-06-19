@@ -17,13 +17,13 @@
     @method('POST')
     <div class="form">
       <div class="labels">
-        <label for="first_name">Nome</label>
-        <label for="last_name">Cognome</label>
-        <label for="address">Indirizzo</label>
-        <label for="code">CAP</label>
-        <label for="state">Stato</label>
-        <label for="phone_number">Telefono</label>
-        <label for="role">Lavoro</label>
+        <label for="first_name">FIRST NAME</label>
+        <label for="last_name">LAST NAME</label>
+        <label for="address">ADDRESS</label>
+        <label for="code">CODE</label>
+        <label for="state">STATE</label>
+        <label for="phone_number">PHONE NUMBER</label>
+        <label for="role">ROLE</label>
       </div>
       <div class="inputs">
         <input type="text" name="first_name" value="{{ $omino['first_name'] }}"> <br>

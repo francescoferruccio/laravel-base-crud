@@ -1,6 +1,12 @@
 @extends('layouts.main_layout')
 
 @section('content')
+  @if (session('success'))
+    <div class="success">
+      <h2>{{ session('success') }}</h2>
+    </div>
+  @endif
+
   <div class="index">
     <h1>Lista omini</h1>
     @foreach ($omini as $omino)

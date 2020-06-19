@@ -28,7 +28,7 @@ class OminiController extends Controller
       'first_name' => 'required|alpha',
       'last_name' => 'required|alpha',
       'address' => 'required',
-      'code' => 'required|integer',
+      'code' => 'required',
       'state' => 'required',
       'phone_number' => 'required',
       'role' => 'required'
@@ -46,7 +46,13 @@ class OminiController extends Controller
 
     $omino -> save();
 
-    return redirect() -> route('home');
+    return redirect()
+          -> route('home')
+          -> withSuccess( 'Omino '
+                          . $omino -> first_name
+                          . ' '
+                          . $omino -> last_name
+                          . ' created.');
   }
 
   public function delete($id) {
@@ -54,7 +60,12 @@ class OminiController extends Controller
 
     $omino -> delete();
 
-    return redirect() -> route('home');
+    return redirect()
+          -> route('home')
+          -> withSuccess( $omino -> first_name
+                          . ' '
+                          . $omino -> last_name
+                          . ' deleted.');;
   }
 
   public function edit($id) {
@@ -68,7 +79,7 @@ class OminiController extends Controller
       'first_name' => 'required|alpha',
       'last_name' => 'required|alpha',
       'address' => 'required',
-      'code' => 'required|integer',
+      'code' => 'required',
       'state' => 'required',
       'phone_number' => 'required',
       'role' => 'required'
@@ -85,6 +96,11 @@ class OminiController extends Controller
 
     $omino -> save();
 
-    return redirect() -> route('show', $omino['id']);
+    return redirect()
+            -> route('show', $omino['id'])
+            -> withSuccess( $omino -> first_name
+                          . ' '
+                          . $omino -> last_name
+                          . ' updated.');
   }
 }

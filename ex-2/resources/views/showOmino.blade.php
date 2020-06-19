@@ -1,6 +1,12 @@
 @extends('layouts.main_layout')
 
 @section('content')
+  @if (session('success'))
+    <div class="success">
+      <h2>{{ session('success') }}</h2>
+    </div>
+  @endif
+
   <div class='show-omino'>
     <h3>Dettagli omino</h3>
     <div class="details">

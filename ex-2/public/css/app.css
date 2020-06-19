@@ -126,3 +126,9 @@ main .error {
   text-align: center;
 }
 
+main .success {
+  margin: 20px auto;
+  color: green;
+  text-align: center;
+}
+
