@@ -16,23 +16,33 @@
     @csrf
     @method('POST')
     <div class="form">
-      <div class="labels">
+      <div class="row">
         <label for="first_name">FIRST NAME</label>
-        <label for="last_name">LAST NAME</label>
-        <label for="address">ADDRESS</label>
-        <label for="code">CODE</label>
-        <label for="state">STATE</label>
-        <label for="phone_number">PHONE NUMBER</label>
-        <label for="role">ROLE</label>
+        <input type="text" name="first_name" value="{{ old("first_name") }}">
       </div>
-      <div class="inputs">
-        <input type="text" name="first_name" value="{{ old("first_name") }}"> <br>
-        <input type="text" name="last_name" value="{{ old("last_name") }}"> <br>
-        <input type="text" name="address" value="{{ old("address") }}"> <br>
-        <input type="text" name="code" value="{{ old("code") }}"> <br>
-        <input type="text" name="state" value="{{ old("state") }}"> <br>
-        <input type="text" name="phone_number" value="{{ old("phone_number") }}"> <br>
-        <input type="text" name="role" value="{{ old("role") }}"> <br>
+      <div class="row">
+        <label for="last_name">LAST NAME</label>
+        <input type="text" name="last_name" value="{{ old("last_name") }}">
+      </div>
+      <div class="row">
+        <label for="address">ADDRESS</label>
+        <input type="text" name="address" value="{{ old("address") }}">
+      </div>
+      <div class="row">
+        <label for="code">CODE</label>
+        <input type="text" name="code" value="{{ old("code") }}">
+      </div>
+      <div class="row">
+        <label for="state">STATE</label>
+        <input type="text" name="state" value="{{ old("state") }}">
+      </div>
+      <div class="row">
+        <label for="phone_number">PHONE NUMBER</label>
+        <input type="text" name="phone_number" value="{{ old("phone_number") }}">
+      </div>
+      <div class="row">
+        <label for="role">ROLE</label>
+        <input type="text" name="role" value="{{ old("role") }}">
       </div>
     </div>
     <div class="button">

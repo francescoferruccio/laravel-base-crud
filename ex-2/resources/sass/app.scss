@@ -103,14 +103,24 @@ main {
   form {
     .form {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
 
-      .labels {
+      .row {
+        width: 400px;
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-        margin-right: 10px;
+        justify-content: flex-end;
+
+        label {
+          display: block;
+          margin-right: 10px;
+        }
+
+        input {
+          display: block;
+          width: 200px;
+        }
       }
     }
 

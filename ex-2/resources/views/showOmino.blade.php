@@ -11,13 +11,13 @@
     <h3>Dettagli omino</h3>
     <div class="details">
       <div class="labels">
-        <b>FIRST NAME:</b>
-        <b>LAST NAME: </b>
-        <b>ADDRESS: </b>
-        <b>CODE: </b>
-        <b>STATE: </b>
-        <b>PHONE NUMBER: </b>
-        <b>ROLE: </b>
+        <p><b>FIRST NAME:</b></p>
+        <p><b>LAST NAME: </b></p>
+        <p><b>ADDRESS: </b></p>
+        <p><b>CODE: </b></p>
+        <p><b>STATE: </b></p>
+        <p><b>PHONE NUMBER: </b></p>
+        <p><b>ROLE: </b></p>
       </div>
       <div class="values">
         <p>{{ $omino['first_name'] }}</p>
