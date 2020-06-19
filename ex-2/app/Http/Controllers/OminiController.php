@@ -24,17 +24,25 @@ class OminiController extends Controller
   }
 
   public function store(Request $request) {
-    $data = $request->all();
+    $validatedData = $request->validate([
+      'first_name' => 'required|alpha',
+      'last_name' => 'required|alpha',
+      'address' => 'required',
+      'code' => 'required|integer',
+      'state' => 'required',
+      'phone_number' => 'required',
+      'role' => 'required'
+    ]);
 
     $omino = new Omino;
 
-    $omino -> first_name = $data['first_name'];
-    $omino -> last_name = $data['last_name'];
-    $omino -> address = $data['address'];
-    $omino -> code = $data['code'];
-    $omino -> state = $data['state'];
-    $omino -> phone_number = $data['phone_number'];
-    $omino -> role = $data['role'];
+    $omino -> first_name = $validatedData['first_name'];
+    $omino -> last_name = $validatedData['last_name'];
+    $omino -> address = $validatedData['address'];
+    $omino -> code = $validatedData['code'];
+    $omino -> state = $validatedData['state'];
+    $omino -> phone_number = $validatedData['phone_number'];
+    $omino -> role = $validatedData['role'];
 
     $omino -> save();
 
@@ -56,16 +64,24 @@ class OminiController extends Controller
   }
 
   public function update(Request $request, $id) {
-    $data = $request -> all();
+    $validatedData = $request->validate([
+      'first_name' => 'required|alpha',
+      'last_name' => 'required|alpha',
+      'address' => 'required',
+      'code' => 'required|integer',
+      'state' => 'required',
+      'phone_number' => 'required',
+      'role' => 'required'
+    ]);
     $omino = Omino::findOrFail($id);
 
-    $omino -> first_name = $data['first_name'];
-    $omino -> last_name = $data['last_name'];
-    $omino -> address = $data['address'];
-    $omino -> code = $data['code'];
-    $omino -> state = $data['state'];
-    $omino -> phone_number = $data['phone_number'];
-    $omino -> role = $data['role'];
+    $omino -> first_name = $validatedData['first_name'];
+    $omino -> last_name = $validatedData['last_name'];
+    $omino -> address = $validatedData['address'];
+    $omino -> code = $validatedData['code'];
+    $omino -> state = $validatedData['state'];
+    $omino -> phone_number = $validatedData['phone_number'];
+    $omino -> role = $validatedData['role'];
 
     $omino -> save();
 
